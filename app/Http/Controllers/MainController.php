@@ -91,4 +91,11 @@ class MainController extends Controller
     {
         //
     }
+
+    public function about()
+    {
+        return view('main.about', [
+            'title' => 'About'
+        ]);
+    }
 }

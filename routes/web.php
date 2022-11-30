@@ -23,6 +23,7 @@ use App\Http\Controllers\DashboardPostController;
 // });
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/about', [MainController::class, 'about']);
 Route::get('/post/{post:slug}', [MainController::class, 'show']);
 
 Auth::routes(['register' => false, 'request' => false, 'reset' => false]);

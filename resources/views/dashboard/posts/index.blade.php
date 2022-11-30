@@ -29,7 +29,7 @@
                             @foreach ($posts as $post)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td width="60%">{{$post->title}}</td>
+                                <td width="55%">{{$post->title}}</td>
                                 <td>{{date('M d, Y', strtotime($post->created_at));}}</td>
                                 <td>
                                     @if ($post->status == 0)
@@ -42,6 +42,7 @@
                                 <td>
                                     <a href="/dashboard/posts/{{$post->slug}}/edit" class="btn btn-warning badge">Edit</a>
                                     @if ($post->status == 1)
+                                    <a href="/" target="_blank" rel="noopener noreferrer" class="btn btn-info badge">View</a>
                                     <form action="/dashboard/posts/{{$post->slug}}" method="POST" class="d-inline">
                                         @method('delete')
                                         @csrf

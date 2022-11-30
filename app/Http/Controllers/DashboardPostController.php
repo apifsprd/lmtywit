@@ -21,7 +21,7 @@ class DashboardPostController extends Controller
         return view('dashboard.posts.index', [
             'title' => 'Posts',
             'active' => 'posts',
-            'posts' => Post::select('title', 'slug','status', 'published_at', 'created_at')->where('user_id', auth()->user()->id)->get()
+            'posts' => Post::latest()->select('title', 'slug','status', 'published_at', 'created_at')->where('user_id', auth()->user()->id)->get()
         ]);
     }
 
@@ -53,7 +53,8 @@ class DashboardPostController extends Controller
             'title' => 'required|unique:posts',
             'image' => 'image|file|max:2048',
             'body' => 'required',
-            'status' => 'required'
+            'status' => 'required',
+            'imgcaption' => 'required'
         ]);
 
         if ($request->file('image')) {

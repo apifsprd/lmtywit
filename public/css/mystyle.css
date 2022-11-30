@@ -1,55 +1,141 @@
+body {
+    padding: 5% 25% 5% 25%;
+}
+
 a {
     text-decoration: none;
-    /* color: rgb(31, 191, 255); */
     color: black;
 }
 
 a:hover {
-    color: rgb(31, 191, 255);
+    color: skyblue;
 }
 
-.main {
-    padding: 4rem;
-}
-
-#lmtywit,
+header,
 .card-title,
 #title {
-    font-family: "Playfair Display", Georgia, "Times New Roman",
-        serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
 }
 
-.post img {
-    /* max-width: 100%; */
-    max-height: 14rem;
+.card-text,
+.about p {
+    font-family: "Libre Caslon Text", serif;
 }
 
-.image {
-    max-height: 350px;
+.heropost #img {
+    max-height: 250px;
     overflow: hidden;
 }
 
-.image img {
+.posts #img {
+    max-height: 130px;
+    overflow: hidden;
+}
+
+.artikel #imgpost {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.artikel img {
     width: 100%;
 }
 
-.article {
-    font-size: 18px;
-    font-family: "Times New Roman",
-        serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+.artikel .text {
+    font-family: "Libre Caslon Text", serif;
     text-align: justify;
+    line-height: 1.9rem;
 }
 
-/*
- * Footer
- */
-.blog-footer {
-    padding: 2.5rem 0;
-    color: #727272;
-    text-align: center;
-    /* background-color: #f9f9f9; */
-    border-top: 0.05rem solid #e5e5e5;
+.about img {
+    width: 150px;
 }
-.blog-footer p:last-child {
-    margin-bottom: 0;
+
+@media only screen and (max-width: 992px) {
+    body {
+        padding: 10% 15% 10% 15%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    header,
+    .card-title,
+    #title {
+        /* font-size: large; */
+    }
+
+    .heropost #img {
+        max-height: 150px;
+        overflow: hidden;
+    }
+
+    .posts #img {
+    }
+
+    .artikel #imgpost {
+        max-height: 250px;
+        overflow: hidden;
+    }
+
+    .artikel #imgpost img {
+        width: 100%;
+    }
+
+    .artikel .text {
+        font-family: "Libre Caslon Text", serif;
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 16px;
+    }
+
+    #more {
+        font-size: medium;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+        padding: 10% 10% 10% 10%;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    header,
+    .card-title,
+    #title {
+        font-size: large;
+    }
+
+    .heropost #img {
+        max-height: 150px;
+        overflow: hidden;
+    }
+
+    .posts #img {
+    }
+
+    .artikel #imgpost {
+        max-height: 250px;
+        overflow: hidden;
+    }
+
+    .artikel #imgpost img {
+        width: 100%;
+    }
+
+    .artikel .text {
+        font-family: "Libre Caslon Text", serif;
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 14px;
+    }
+
+    #more {
+        font-size: medium;
+    }
 }

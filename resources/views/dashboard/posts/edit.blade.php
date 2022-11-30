@@ -52,6 +52,23 @@
                         {{$message}}
                     </div>
                     @enderror
+
+                    <div class="py-3">
+                        <div class="form-floating">
+                            <textarea
+                              class="form-control @error('imgcaption') is-invalid @enderror"
+                              name="imgcaption"
+                              placeholder="Leave a comment here"
+                              id="floatingTextarea"
+                            >{{$post->imgcaption}}</textarea>
+                            @error('imgcaption')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                            @enderror
+                            <label for="floatingTextarea">Image Caption</label>
+                        </div>                         
+                    </div>
                 </div>
             </div>
         </div>

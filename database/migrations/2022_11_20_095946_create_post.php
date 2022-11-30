@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('user_id');
             $table->string('slug')->unique();
-            $table->string('image')->nullable();
+            $table->string('image')->default('default.png');
+            $table->string('imgcaption')->nullable();
             $table->text('excerpt');
             $table->text('body');
             $table->boolean('status')->default(0);
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('posts');
     }
 };
